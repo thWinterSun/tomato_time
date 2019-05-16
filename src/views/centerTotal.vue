@@ -1,7 +1,12 @@
 <template lang="html">
   <div class="">
     <Card :bordered="false" >
-      aaa
+      <Row>
+        <Col span="6">1</Col>
+        <Col span="6">2</Col>
+        <Col span="6">3</Col>
+        <Col span="6">4</Col>
+      </Row>
     </Card>
   </div>
 </template>
