@@ -35,6 +35,10 @@
   }
 }
 
+
+.ivu-menu-vertical .ivu-menu-item{
+  padding: 5px 0;
+}
 </style>
 <template>
     <div class="layout">
@@ -73,19 +77,28 @@
             <Layout>
               <Sider >
                 <Menu active-name="1-2" theme="light" width="auto" >
-                  <MenuItem name="1-1">
-                      <Icon type="md-sunny" />
-                      <span>今天</span>
-
-                  </MenuItem>
-                  <MenuItem name="1-2">
-                      <Icon type="ios-partly-sunny" />
-                      <span>明天</span>
-                  </MenuItem>
-                  <MenuItem name="1-3">
-                      <Icon type="md-calendar" />
-                      <span>待定</span>
-                  </MenuItem>
+                  <CellGroup>
+                    <MenuItem name="1-1">
+                        <Cell title="今天" extra="1.7h" >
+                          <Icon type="md-sunny" slot="icon" />
+                        </Cell>
+                    </MenuItem>
+                    <MenuItem name="1-2">
+                        <Cell title="明天" extra="0h" >
+                          <Icon type="ios-partly-sunny" slot="icon" />
+                        </Cell>
+                    </MenuItem>
+                    <MenuItem name="1-3">
+                        <Cell title="待定" extra="1.8h" >
+                          <Icon type="md-calendar" slot="icon" />
+                        </Cell>
+                    </MenuItem>
+                    <MenuItem name="1-4">
+                        <Cell title="即将到来" extra="0h" >
+                          <Icon type="md-calendar" slot="icon" />
+                        </Cell>
+                    </MenuItem>
+                  </CellGroup>
                 </Menu>
               </Sider>
                 <Layout :style="{padding: '24px 24px'}">
